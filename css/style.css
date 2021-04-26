@@ -156,10 +156,10 @@ body {
 
 /* Style the checkmark/indicator */
 .tag-filter-div .checkmark:after {
-  left: 7px;
+  left: 6px;
   top: 2px;
-  width: 7px;
-  height: 12px;
+  width: 5px;
+  height: 10px;
   border: solid white;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
