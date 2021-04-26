@@ -19,12 +19,18 @@ Steam is arguably the #1 gaming platform for the PC. Each year, millions of peop
 - <b>Tag filtering</b>: on the right we have a list of checkboxes that allows the user to select the tag they want to see. After the checkbox is clicked, the line for the selected tag will show on the plot. The y-axis scale will change accordingly.  
 - <b>Tag search</b>: on top of the tag filters, we have a search bar that allows you to search for tags. We are using an external library “FlexSearch” (https://github.com/nextapps-de/flexsearch ) because it provides fast and fuzzy search. 
 - <b>Reset Button</b>: under the tag filter, we have a reset button that allows you to reset the tag filter to default setting. The default selections of tags right now are “Action”, “FPS” and “RPG”.
+![image](https://user-images.githubusercontent.com/32007214/116154988-55d50700-a69e-11eb-8f21-04ba4dfb6f52.png)
+
+
 
 ### Network Graph Functionalities
 - <b>Relationships</b>: The nodes represent tags. The links represent relationships between tags. The size of node encodes the number of games having that tag. The thickness of link encodes the number of times both tags appear together.
 - <b>Node category</b>: There are 11 tag categories. Each category is represented by a different color.
 - <b>Node dragging</b>: user can drag the nodes and the network will be able to reorganize itself.
 - <b>Tooltip</b>: on hovering on a node, information on the corresponding tag's name, median rating count, and number of games will be shown.
+
+![image](https://user-images.githubusercontent.com/32007214/116155035-69806d80-a69e-11eb-84c6-4db6dce7c349.png)
+
 
 ### File Structure
 - data
