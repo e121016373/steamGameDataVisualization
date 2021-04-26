@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video games Galore: The Steam Ecosystem</title>
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Video games Galore: The Steam Ecosystem</h1>
+
+    <div class="line-plot-container">
+      <svg id="line-plot"></svg>
+      <div class="tag-filter" id="tag-filter">
+        <form class="switch-button" id="switch-button">
+          <input
+            type="radio"
+            id="median-number-of-rating"
+            name="switch-one"
+            value="Median Number of Ratings"
+            checked
+          />
+          <label for="median-number-of-rating"> Median Number of Ratings</label>
+
+          <input
+            type="radio"
+            id="number-of-games"
+            name="switch-one"
+            value="Number of Games"
+          />
+          <label for="number-of-games"> Number of Games</label>
+        </form>
+        <div class="tag-filter-button-div">
+          <button class="tag-filter-button" id="reset-button">Reset</button>
+          <button class="tag-filter-button" id="clear-button">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="networkgraph"></div>
+
+    <div id="tooltip"></div>
+    <script src="js/d3.v6.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/linePlot.js"></script>
+    <script src="js/network.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/nextapps-de/flexsearch@master/dist/flexsearch.min.js"></script>
+  </body>
+</html>
