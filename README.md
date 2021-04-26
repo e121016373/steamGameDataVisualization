@@ -18,7 +18,7 @@ Steam is arguably the #1 gaming platform for the PC. Each year, millions of peop
 - <b>Variable Switching</b>: able to switch the variable on y-axis by clicking the switch button on top of the line plot. We have “Median Number of Rating” and “Number of Games” available.
 - <b>Tag filtering</b>: on the right we have a list of checkboxes that allows the user to select the tag they want to see. After the checkbox is clicked, the line for the selected tag will show on the plot. The y-axis scale will change accordingly.  
 - <b>Tag search</b>: on top of the tag filters, we have a search bar that allows you to search for tags. We are using an external library “FlexSearch” (https://github.com/nextapps-de/flexsearch ) because it provides fast and fuzzy search. 
-- <b>Reset Button</b>: under the tag filter, we have a reset button that allows you to reset the tag filter to default setting. The default selections of tags right now are “Action”, “FPS” and “RPG”.
+- <b>Reset Button</b>: under the tag filter, we have a reset button that allows you to reset the tag filter to default setting. The default setting is the top 5 tags that have the most median number of ratings or the most number of games.
 ![image](https://user-images.githubusercontent.com/32007214/116154988-55d50700-a69e-11eb-8f21-04ba4dfb6f52.png)
 
 
