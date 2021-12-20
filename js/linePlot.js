@@ -125,7 +125,7 @@ class LinePlot {
       .sort((a, b) => a.year - b.year);
 
     // Setup Flex Search and add tags into search index
-    vis.searchIndex = new FlexSearch();
+    vis.searchIndex = new FlexSearch.Index();
     vis.tags = [...new Set(vis.allData.map((d) => d.name))];
     vis.tags.forEach((tag) => {
       vis.searchIndex.add(tag, tag);
@@ -502,7 +502,7 @@ class LinePlot {
     }
   };
 
-  // returns the opacity for tags that are in the same cluster. 
+  // returns the opacity for tags that are in the same cluster.
   // NOTE: The ones that are selected later will get lower opacity in order to better differentiate lines in the same color
   getOpacity = (tagName, tagFilter) => {
     const color = getCategoryColor(tagCategoryMap.get(tagName));

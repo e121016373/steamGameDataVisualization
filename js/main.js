@@ -54,7 +54,6 @@ d3.csv("data/data.csv").then((data) => {
 
   // Group data by year
   dataByYear = d3.group(data, (d) => d.release_date.slice(0, -6));
-  console.log(dataByYear);
 
   // Set of tag names to include in visualization
   var tagInclusionSet = new Set();
@@ -66,7 +65,6 @@ d3.csv("data/data.csv").then((data) => {
       }
     });
   });
-  console.log(tagInclusionSet);
 
   for (const entry of dataByYear.entries()) {
     // Create map of tag name to numGames released in a specific year for the tag
@@ -88,7 +86,6 @@ d3.csv("data/data.csv").then((data) => {
       }
     });
   }
-  console.log(tagInclusionSet);
 
   // Generate aggregated tag data by year
   var tagDataByYear = new Map();
@@ -135,7 +132,6 @@ d3.csv("data/data.csv").then((data) => {
       tagData["medianRatingCount"] = d3.median(tagData["ratingCounts"]);
     });
   });
-  console.log(tagDataByYear);
 
   var networkData = generateNetworkGraphData(tagDataByYear);
   network = new Network(
@@ -194,7 +190,6 @@ function generateNetworkGraphData(tagDataByYear) {
   tagDataInTimeRange.forEach((tagData) => {
     tagData["medianRatingCount"] = d3.median(tagData["ratingCounts"]);
   });
-  console.log(tagDataInTimeRange);
 
   // Convert map to array
   var tagArray = Array.from(tagDataInTimeRange.entries()).map((entry) => {
@@ -213,7 +208,6 @@ function generateNetworkGraphData(tagDataByYear) {
     .sort((a, b) => (a.numGames < b.numGames ? 1 : -1))
     .slice(0, 10);
   topTags = topTags.map((tag) => tag.name);
-  console.log(topTags);
 
   // Create name-to-ID map to keep track of node ids
   var tagIDMap = new Map();
@@ -248,7 +242,6 @@ function generateNetworkGraphData(tagDataByYear) {
     tagCategoryMap.set(tagData.name, topRelationshipCategory);
     nodeIDCounter++;
   });
-  console.log(nodes);
 
   // Create linkMap to avoid duplicate links
   var linkMap = new Map();
@@ -279,7 +272,6 @@ function generateNetworkGraphData(tagDataByYear) {
     });
   });
   var links = Array.from(linkMap.entries()).map((link) => link[1]);
-  console.log(links);
 
   return { nodes: nodes, links: links };
 }
